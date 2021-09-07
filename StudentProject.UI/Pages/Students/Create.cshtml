@@ -1,0 +1,9 @@
+﻿@page "{Id:int?}"
+@model StudentProject.UI.Pages.Students.CreateModel
+@{
+}
+<form method="post">
+    <input type="hidden" asp-for="EditStudent.Id" />
+    <input asp-for="EditStudent.Name" />
+    <input type="submit" value="submit" />
+</form>

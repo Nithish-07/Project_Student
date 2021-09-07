@@ -1,0 +1,31 @@
+﻿@page
+@model StudentProject.UI.Pages.StudentsModel
+@{
+}
+<p>ok done</p>
+<table>
+    @foreach (var item in Model.StudentDetails)
+    {
+     
+    <tr>
+        <td>@item.Id</td>
+    </tr>
+    <tr>
+        <td>@item.Name</td>
+    </tr>
+    <tr>
+        <td>
+            <a asp-page="Create" asp-route-Id="@item.Id">Edit data</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a asp-page="Detail" asp-route-Id="@item.Id">View Details</a>
+        </td>
+        <td>
+            <a asp-page="Delete" asp-route-Id="@item.Id">Delete Records</a>
+        </td>
+    </tr>
+    }   
+</table>
+<a asp-page="Create">Add new Data</a>
